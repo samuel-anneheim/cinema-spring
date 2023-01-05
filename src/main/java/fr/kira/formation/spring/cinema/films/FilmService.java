@@ -170,7 +170,7 @@ public class FilmService {
     }
 
     public List<Film> findByDate(String date){
-        List<Seance> seances = seanceRepository.findbyDate(LocalDate.parse(date));
+        List<Seance> seances = seanceRepository.findByDate(LocalDate.parse(date));
         List<Film> films = new ArrayList<>();
         for (Seance seance: seances){
             films.add(seance.getFilm());

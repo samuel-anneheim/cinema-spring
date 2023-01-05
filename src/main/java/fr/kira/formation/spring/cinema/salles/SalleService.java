@@ -41,7 +41,7 @@ public class SalleService {
     }
 
     public List<Salle> findByDate(String date){
-        List<Seance> seances = seanceRepository.findbyDate(LocalDate.parse(date));
+        List<Seance> seances = seanceRepository.findByDate(LocalDate.parse(date));
         List<Salle> salles = new ArrayList<>();
         for (Seance seance: seances){
             if (seance.getNombrePlace() > 0){
